@@ -63,8 +63,15 @@
     }else{
         writeOutput("not defined!");
     }
-    writeDump(variables);
-    abort;
+    /* writeDump(variables);
+    abort; */
 
 </cfscript>
+</p>
+
+<p>
+    <cfscript>
+        a = "hello"
+        writeOutput(a.getClass().getName());
+    </cfscript>
 </p>
