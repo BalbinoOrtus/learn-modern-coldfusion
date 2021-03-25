@@ -17,3 +17,13 @@
         }
     }
 </cfscript> --->
+
+<!--- variables --->
+<cfscript>
+    a = "string"; //string
+    b = now(); //data
+    c=123; //integer
+    d=1.34; //float
+    f=false; //boolean
+    writeOutput("now is #b#");
+</cfscript>
