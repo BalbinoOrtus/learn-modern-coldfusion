@@ -1,8 +1,10 @@
 {
     "dependencies":{
-        "docbox":"^3.0.0+57"
+        "docbox":"^3.0.0+57",
+        "wirebox":"^6.3.0+1436"
     },
     "installPaths":{
-        "docbox":"docbox/"
+        "docbox":"docbox/",
+        "wirebox":"wirebox/"
     }
 }
