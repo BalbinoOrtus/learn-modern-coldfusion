@@ -1,4 +1,7 @@
 <cfscript>
     wirebox = new wirebox.system.ioc.Injector( "Binder" );
-    writeDump(wirebox);
+    utilsObj = wirebox.getInstance("models.Utils");
+
+    utilsObj.wopln("arrays are going here");
+    
 </cfscript>
