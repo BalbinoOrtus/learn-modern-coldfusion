@@ -8,4 +8,23 @@ component{
             password : "root"
         }
     };
+
+    public boolean function onApplicationStart(){
+        application.dsn = this.datasources.mySqlDB;
+
+        application.PersonService = createObject("models.person.PersonService").init( datasource = application.dsn );
+
+        return true;
+    }
+
+    public boolean function onRequestStart(){
+        
+
+        if (StructkeyExists(url, 'reloadApp') AND url.reloadApp EQ 1) {
+            this.onApplicationStart();
+        }
+
+        return true;
+    }
+
 }

@@ -9,13 +9,13 @@
 <body>
     <h1>person main</h1>
 
-    <cfscript>
-        persons = queryExecute("SELECT ID,NAME,AGE FROM Person");
-    </cfscript>
+    <br><br>
+    <a href="?act=other">foobar</a>
+    <br><br>
 
     <div class="container">
         <div class="newlink">
-            <a href="#">new person</a>
+            <a href="frm_person.cfm">new person</a>
         </div>
 
         <div class="tablediv">
@@ -25,11 +25,13 @@
                     <th>name</th>
                     <th>age</th>
                 </tr>
-                <cfoutput query = "persons" encodefor="html">
+                <cfoutput query = "request.persons" encodefor="html">
                     <tr>
-                        <td>#persons.id#</td>
-                        <td>#persons.name#</td>
-                        <td>#persons.age#</td>
+                        <td>#request.persons.id#</td>
+                        <td>#request.persons.name#</td>
+                        <td>#request.persons.age#</td>
+                        <td><a href="frm_person.cfm?pid=#request.persons.id#">modify</a></td>
+                        <td>delete</td>
                     </tr>
                 </cfoutput>
             </table>
