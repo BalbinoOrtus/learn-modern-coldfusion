@@ -10,12 +10,12 @@
     <h1>person main</h1>
 
     <br><br>
-    <a href="?act=other">foobar</a>
+    <a href="?action=other">foobar</a>
     <br><br>
 
     <div class="container">
         <div class="newlink">
-            <a href="frm_person.cfm">new person</a>
+            <a href="?action=newStart">new person</a>
         </div>
 
         <div class="tablediv">
@@ -30,8 +30,8 @@
                         <td>#request.persons.id#</td>
                         <td>#request.persons.name#</td>
                         <td>#request.persons.age#</td>
-                        <td><a href="frm_person.cfm?pid=#request.persons.id#">modify</a></td>
-                        <td>delete</td>
+                        <td><a href="?action=updateStart&pid=#request.persons.id#">modify</a></td>
+                        <td><a href="?action=delete&pid=#request.persons.id#">delete</a> </td>
                     </tr>
                 </cfoutput>
             </table>

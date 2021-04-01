@@ -1,8 +1,8 @@
 component accessors="true" {
 
 
-    property name="person_id" type="numeric" default="0";
-    property name="fname" type="string" default="";
-    property name="lname" type="string" default="";
+    property name="id" type="numeric" default="0";
+    property name="name" type="string" default="";
+    property name="age" type="numeric" default="0";
 
 }

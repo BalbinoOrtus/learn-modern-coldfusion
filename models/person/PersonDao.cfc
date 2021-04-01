@@ -9,18 +9,29 @@ component{
     //read
 
     //create
-    numeric function create(required string fname,
-                             required string lname) {
+    void function create(required numeric pId, required string pName, required numeric pAge) {
 
         // query to create goes here
-
-        return person_id;
+        queryExecute("INSERT INTO Person(id,name,age) VALUES(?,?,?)",
+                    [
+                        arguments.pId,
+                        arguments.pName,
+                        arguments.pAge
+                    ],
+                    {datasource=variables.dataSource});
     }
 
     //update
     void function update() {
 
         // update query
-        
+
+    }
+
+    //delete
+    void function delete(pId){
+        queryExecute("DELETE FROM Person WHERE ID= :pId",
+                    {pId = {value=arguments.pId, cfsqltype="numeric", list=true}},
+                    {datasource=variables.dataSource});
     }
 }
