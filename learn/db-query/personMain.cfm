@@ -12,6 +12,15 @@
     <br><br>
     <a href="?action=other">foobar</a>
     <br><br>
+    <a href="?reloadApp=1">reload me</a>
+    <br><br>
+
+
+    <cfparam name="url.msg" default="" />
+
+    <cfif len(url.msg) GT 0>
+        <div><cfoutput>#url.msg#</cfoutput></div>
+    </cfif>
 
     <div class="container">
         <div class="newlink">

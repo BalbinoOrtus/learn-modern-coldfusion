@@ -16,7 +16,7 @@
 
 
     <cfoutput>
-        <form action="#(url.action=="newStart")?"?action=newEnd":"?action=updateEnd"#">
+        <form action="#(url.action=="newStart")?"?action=newEnd":"?action=updateEnd"#" method="post">
             <label for="id">id</label>
             <input name="id" type="#(url.action=="newStart")?"hidden":"text"#" value="#person.getId()#">
             <br><br>
