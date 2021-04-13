@@ -48,6 +48,10 @@ component{
         variables.personDAO.create(pId = 0, pName = arguments.pName, pAge = arguments.pAge);
     }
 
+    void function updatePerson(required numeric pId, required string pName, required numeric pAge){
+        variables.personDAO.update(pId = arguments.pId, pName=arguments.pName, pAge=arguments.pAge);
+    }
+
     void function deletePerson(required numeric pId){
         variables.personDAO.delete(pId);
     }
