@@ -17,8 +17,8 @@
         include "/learn/db-query/personForm.cfm";
         break;
     case "updateEnd":
-        application.PersonService.createPerson(form.name, form.age);
-        include "/learn/db-query/personForm.cfm";
+        application.PersonService.updatePerson(form.id, form.name, form.age);
+        location("?action=home&msg=updatesuccess", false);
         break;
     case "delete":
         application.PersonService.deletePerson(url.pid);

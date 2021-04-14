@@ -22,10 +22,14 @@ component{
     }
 
     //update
-    void function update() {
-
+    void function update(required numeric pId, required string pName, required numeric pAge) {
         // update query
-
+        queryExecute("UPDATE Person SET name = ?, age = ? WHERE id = ?;",
+                    [
+                        arguments.pName,
+                        arguments.pAge,
+                        arguments.pId
+                    ],{datasource=variables.dataSource});
     }
 
     //delete
